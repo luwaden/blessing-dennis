@@ -16,16 +16,38 @@ export const wedding = {
     photo: 'https://res.cloudinary.com/YOUR_CLOUD/image/upload/w_600,h_800,c_fill/groom-portrait.jpg',
   },
   weddingDate: new Date('2026-08-01T10:00:00'),
-  venue: {
+
+
+  hashtag: '#BlessingAndDennis2026',
+  couple: 'Blessing & Dennis',
+  coupleInitials: 'B & D',
+};
+
+// Replace the single venue object with two:
+export const venues = {
+  
+  church: {
     name: 'St.Matthias Hall',
     address: 'Ajayi Crowther seminary, Grammar School Bus Stop, Igbein ',
     city: 'Abeokuta, Nigeria',
     mapLink: 'https://maps.app.goo.gl/rskwchj2KY7m55eo7',
   },
-  hashtag: '#BlessingAndDennis2026',
-  couple: 'Blessing & Dennis',
-  coupleInitials: 'B & D',
+  reception: {
+    name: 'The Oriental Hotel',
+    address: '3 Lekki-Epe Expressway, Victoria Island',
+    city: 'Lagos, Nigeria',
+    time: '3:00 PM',
+    mapLink: 'https://maps.google.com/?q=The+Oriental+Hotel+Lagos',
+  },
 };
+
+export const contacts = [
+  { name: 'Abayomi',   role: 'Head of Planning',      phone: '+234 801 000 0001' },
+  { name: 'Florence',  role: 'Bride\'s Coordinator',   phone: '+234 801 000 0002' },
+  { name: 'Tolulope',  role: 'Groom\'s Coordinator',   phone: '+234 801 000 0003' },
+  { name: 'Ifeoluwa',  role: 'Logistics & Transport',  phone: '+234 801 000 0004' },
+];
+
 
 export const schedule = [
   { time: '9:30 AM', event: 'Guests Arrive', note: 'Please be seated by 9:50 AM' },

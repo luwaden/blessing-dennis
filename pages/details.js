@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
 import { SectionLabel, FleuronDivider, ArchOrnament } from '../components/ArchDecor';
-import { schedule, wedding } from '../config/wedding';
+import { schedule, wedding,contacts,venues } from '../config/wedding';
 import Link from 'next/link';
 
 const faqs = [
@@ -91,61 +91,53 @@ export default function Details() {
         label="All You Need to Know"
         subtitle="Everything about our ceremony and reception, gathered in one place for you."
       />
+{/* ── Venues ─────────────────────────────────────────────── */}
+<section className="bg-white py-16 md:py-24 px-5">
+  <div className="max-w-5xl mx-auto">
+    <div className="text-center mb-14">
+      <SectionLabel label="The Venues" />
+      <h2 className="font-script text-wine mt-4 text-4xl md:text-5xl">Where & When</h2>
+    </div>
 
-      {/* ── Venue ────────────────────────────────────────────── */}
-      <section className="bg-white py-16 md:py-24 px-5">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-            {/* Venue image */}
-            <div
-              className="overflow-hidden shadow-md"
-              style={{ borderRadius: '50% 50% 0 0 / 20% 20% 0 0' }}
-            >
-              <div className="aspect-[4/5]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80"
-                  alt="Wedding venue"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Venue info */}
-            <div>
-              <SectionLabel label="The Venue" className="items-start" />
-              <h2 className="font-script text-wine mt-4 mb-6 text-4xl md:text-5xl leading-tight">
-                {wedding.venue.name}
-              </h2>
-
-              <div className="space-y-4 mb-8">
-                <div>
-                  <p className="font-garamond text-xs tracking-[0.3em] uppercase text-wine opacity-70 mb-1">Address</p>
-                  <p className="font-garamond text-ink text-base">{wedding.venue.address}</p>
-                  <p className="font-garamond text-ink text-base">{wedding.venue.city}</p>
-                </div>
-                <div>
-                  <p className="font-garamond text-xs tracking-[0.3em] uppercase text-wine opacity-70 mb-1">Date</p>
-                  <p className="font-garamond text-ink text-base">Saturday, August 1, 2026</p>
-                </div>
-                <div>
-                  <p className="font-garamond text-xs tracking-[0.3em] uppercase text-wine opacity-70 mb-1">Ceremony Begins</p>
-                  <p className="font-garamond text-ink text-base">10:00 AM (doors open 9:30 AM)</p>
-                </div>
-              </div>
-
-              <a
-                href={wedding.venue.mapLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-wine inline-block"
-              >
-                View on Google Maps
-              </a>
-            </div>
-          </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+      {/* Church */}
+      <div className="border border-wine border-opacity-15 p-8">
+        <span className="font-garamond text-xs tracking-[0.3em] uppercase text-wine opacity-70 block mb-3">
+          Ceremony
+        </span>
+        <h3 className="font-script text-wine text-3xl mb-4 leading-tight">
+          {venues.church.name}
+        </h3>
+        <div className="space-y-3 mb-6">
+          <p className="font-garamond text-ink text-base">{venues.church.address}</p>
+          <p className="font-garamond text-ink text-base">{venues.church.city}</p>
+          <p className="font-garamond text-wine font-medium">⏱ {venues.church.time}</p>
         </div>
-      </section>
+        <a href={venues.church.mapLink} target="_blank" rel="noopener noreferrer" className="btn-wine inline-block">
+          View on Map
+        </a>
+      </div>
+
+      {/* Reception */}
+      <div className="border border-wine border-opacity-40 p-8 bg-wine-pale">
+        <span className="font-garamond text-xs tracking-[0.3em] uppercase text-wine opacity-70 block mb-3">
+          Reception
+        </span>
+        <h3 className="font-script text-wine text-3xl mb-4 leading-tight">
+          {venues.reception.name}
+        </h3>
+        <div className="space-y-3 mb-6">
+          <p className="font-garamond text-ink text-base">{venues.reception.address}</p>
+          <p className="font-garamond text-ink text-base">{venues.reception.city}</p>
+          <p className="font-garamond text-wine font-medium">⏱ {venues.reception.time}</p>
+        </div>
+        <a href={venues.reception.mapLink} target="_blank" rel="noopener noreferrer" className="btn-wine inline-block">
+          View on Map
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
       <FleuronDivider className="bg-cream py-4" />
 
@@ -208,6 +200,71 @@ export default function Details() {
           </div>
         </div>
       </section>
+
+            {/* ── Contacts ──────────────────────────────────────────── */}
+<section className="bg-cream py-16 md:py-20 px-5">
+  <div className="max-w-3xl mx-auto">
+    <div className="text-center mb-12">
+      <SectionLabel label="Need Help?" />
+      <h2 className="font-script text-wine mt-4 text-4xl md:text-5xl">
+        Contact the Team
+      </h2>
+
+      <p className="font-garamond italic text-muted text-base mt-3 max-w-md mx-auto">
+        Have a question before or on the day? Reach out to any of our coordinators below.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {contacts.map((person) => (
+        <a
+          key={person.name}
+          href={`tel:${person.phone}`}
+          className="flex items-center gap-5 bg-white border border-wine border-opacity-15 p-6 hover:border-opacity-40 transition-all duration-300 group"
+        >
+          {/* Arch avatar placeholder */}
+          <div
+            className="w-12 h-14 flex-shrink-0 bg-wine-pale flex items-end justify-center overflow-hidden"
+            style={{ borderRadius: '50% 50% 0 0 / 40% 40% 0 0' }}
+          >
+            <span className="font-script text-wine text-2xl leading-none pb-1">
+              {person.name[0]}
+            </span>
+          </div>
+
+          <div className="min-w-0">
+            <p className="font-garamond font-semibold text-ink text-lg leading-tight group-hover:text-wine transition-colors">
+              {person.name}
+            </p>
+
+            <p className="font-garamond italic text-muted text-sm">
+              {person.role}
+            </p>
+
+            <p className="font-garamond text-wine text-sm mt-1 tracking-wide">
+              {person.phone}
+            </p>
+          </div>
+
+          {/* Call icon */}
+          <svg
+            className="ml-auto flex-shrink-0 opacity-30 group-hover:opacity-70 transition-opacity"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#722F37"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
+          </svg>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* ── RSVP CTA ─────────────────────────────────────────── */}
       <section className="bg-cream py-16 px-5 text-center">

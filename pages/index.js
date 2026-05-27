@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import HeroSlider from '../components/HeroSlider';
 import { SectionLabel, FleuronDivider, ArchDivider } from '../components/ArchDecor';
-import { wedding } from '../config/wedding';
+import { wedding,venues } from '../config/wedding';
 
 // Section cards data
 const sections = [
@@ -113,8 +113,10 @@ export default function Home() {
           August 1, 2026
         </h2>
         <p className="font-garamond tracking-[0.2em] text-sm opacity-80 mt-3">
-          {wedding.venue.name} &nbsp;·&nbsp; {wedding.venue.city}
-        </p>
+        {venues.church.name} · {venues.church.city}
+        <br />
+        Reception: {venues.reception.name}
+      </p>
         <p className="font-garamond italic text-sm opacity-60 mt-2">{wedding.hashtag}</p>
       </section>
 

@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { demoHeroImages } from '../config/images';
-import { wedding } from '../config/wedding';
+import { wedding, venues } from '../config/wedding';
 import CountdownTimer from './CountdownTimer';
 
 const SLIDE_INTERVAL = 5500;
@@ -114,7 +114,9 @@ export default function HeroSlider() {
         </div>
 
         <p className="font-garamond italic text-sm md:text-base opacity-80 mb-10">
-          {wedding.venue.name}, {wedding.venue.city}
+          {venues.church.name} · {venues.church.city}
+          <br />
+          Reception: {venues.reception.name}
         </p>
 
         {/* CTA buttons */}

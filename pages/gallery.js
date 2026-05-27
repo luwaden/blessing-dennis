@@ -74,7 +74,7 @@ export default function Gallery() {
   return (
     <Layout>
       <Head>
-        <title>Gallery — Blessing & Dennis</title>
+        <title>Gallery — Chioma & Tobenna</title>
       </Head>
 
       <PageHeader
