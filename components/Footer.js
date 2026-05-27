@@ -27,7 +27,7 @@ export default function Footer() {
         </h2>
 
         <p className="font-garamond text-sm tracking-[0.25em] uppercase text-muted mb-6">
-          August 1, 2026 &nbsp;·&nbsp; Victoria Island, Lagos
+          August 1, 2026 &nbsp;·&nbsp; Abeokuta, Ogun
         </p>
 
         <FleuronDivider className="mb-8" />
@@ -51,8 +51,12 @@ export default function Footer() {
         <FleuronDivider className="mb-8" />
 
         <p className="font-garamond text-xs text-muted tracking-wider">
-          Made with love &hearts; for our special day
-        </p>
+  Made by{" "}
+  <Link href="https://www.prox.com.ng" target="_blank" rel="noopener noreferrer" className="underline">
+    Prox AIds
+  </Link>{" "}
+  &hearts; for their special day
+</p>
       </div>
     </footer>
   );
