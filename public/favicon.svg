@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 53" fill="none">
+  <!-- Arch roof -->
+  <path d="M 4 26 Q 30 4 56 26" stroke="#722F37" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Left wall -->
+  <line x1="4" y1="26" x2="4" y2="51" stroke="#722F37" stroke-width="3" stroke-linecap="round"/>
+  <!-- Right wall -->
+  <line x1="56" y1="26" x2="56" y2="51" stroke="#722F37" stroke-width="3" stroke-linecap="round"/>
+  <!-- Base -->
+  <line x1="4" y1="51" x2="56" y2="51" stroke="#722F37" stroke-width="3" stroke-linecap="round"/>
+  <!-- Arch door -->
+  <path d="M 22 51 L 22 38 Q 30 30 38 38 L 38 51" stroke="#722F37" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'EB Garamond', serif;
+    background-color: #FAF7F4;
+    color: #2C1810;
+    font-size: 18px;
+    line-height: 1.75;
+  }
+
+  h1, h2, h3 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  /* Arch-top image frame */
+  .arch-frame {
+    border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Gentle arch: more rectangular body, rounded top */
+  .arch-frame-tall {
+    border-radius: 999px 999px 0 0;
+    overflow: hidden;
+  }
+
+  /* Section entry animation */
+  .section-enter {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .section-enter.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Wine rule line */
+  .wine-rule {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .wine-rule::before,
+  .wine-rule::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: #722F37;
+    opacity: 0.4;
+  }
+
+  /* Elegant button */
+  .btn-wine {
+    @apply inline-block border border-wine text-wine font-garamond tracking-[0.15em] text-sm px-8 py-3 transition-all duration-300 hover:bg-wine hover:text-white;
+  }
+
+  .btn-wine-filled {
+    @apply inline-block bg-wine text-white font-garamond tracking-[0.15em] text-sm px-8 py-3 transition-all duration-300 hover:bg-wine-hover;
+  }
+
+  .btn-white {
+    @apply inline-block border border-white text-white font-garamond tracking-[0.15em] text-sm px-8 py-3 transition-all duration-300 hover:bg-white hover:text-wine;
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #FAF7F4; }
+  ::-webkit-scrollbar-thumb { background: #722F37; border-radius: 2px; }
+  ::-webkit-scrollbar-thumb:hover { background: #5a1f27; }
+
+  /* Page transition */
+  .page-wrapper {
+    animation: pageIn 0.5s ease-out forwards;
+  }
+
+  @keyframes pageIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Masonry grid helper */
+  .masonry {
+    columns: 3;
+    column-gap: 1.5rem;
+  }
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .masonry { columns: 2; }
+  }
+  @media (max-width: 480px) {
+    .masonry { columns: 1; }
+  }
+}
