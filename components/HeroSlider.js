@@ -4,7 +4,7 @@ import { demoHeroImages } from '../config/images';
 import { wedding, venues } from '../config/wedding';
 import CountdownTimer from './CountdownTimer';
 
-const SLIDE_INTERVAL = 5500;
+const SLIDE_INTERVAL = 1500;
 
 export default function HeroSlider() {
   const images = demoHeroImages; // swap to heroImages from images.js when using Cloudinary

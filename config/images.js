@@ -57,10 +57,10 @@ export const sectionPreviews = {
 // These are provided so the site renders beautifully right away.
 export const demoHeroImages = [
   'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884347/IMG_20251124_170028_1_uipywc.jpg',
-  'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884525/B_O-0814_yeoras.jpg',
-  'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779886021/IMG_4358_n73kz0.jpg',
+  'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779974829/PXL_20250815_101649200.PORTRAIT_dftccg.jpg',
+  'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779886529/IMG_20260214_115400_333_sxxnbn.jpg',
   'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1920&q=80',
-  'https://images.unsplash.com/photo-1529636798458-92182e662485?w=1920&q=80',
+  'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884402/PXL_20250816_130249029_qu17om.jpg',
 ];
 
 export const demoGalleryImages = [

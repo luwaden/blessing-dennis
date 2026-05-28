@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
 import { SectionLabel, FleuronDivider, HouseLogo } from '../components/ArchDecor';
 
-const SCRIPT_URL = process.env.NEXT_PUBLIC_APPS_SCRIPT_URL || '';
+//const SCRIPT_URL = process.env.NEXT_PUBLIC_APPS_SCRIPT_URL || '';
 
 const YES_MESSAGE = {
   heading: 'We Cannot Wait to See You!',
@@ -42,17 +42,16 @@ const inputClass =
 
 export default function RSVP() {
   const [form, setForm] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    attending: '',
-    guests: '1',
-    meal: '',
-    dietaryNotes: '',
-    song: '',
-    message: '',
-  });
+  firstName: '',
+  lastName:  '',
+  email:     '',
+  phone:     '',
+  attending: '',
+  guests:    '1',
+  meal:      '',
+  song:      '',
+  message:   '',
+});
 
   const [status, setStatus] = useState('idle'); // idle | loading | yes | no | error
   const [errorMsg, setErrorMsg] = useState('');
@@ -72,33 +71,60 @@ export default function RSVP() {
     setStatus('loading');
     setErrorMsg('');
 
-    try {
-      // Build form-encoded payload for Apps Script
-      const payload = new URLSearchParams({
-        firstName:     form.firstName,
-        lastName:      form.lastName,
-        email:         form.email,
-        phone:         form.phone,
-        attending:     form.attending,
-        guests:        form.attending === 'yes' ? form.guests : '0',
-        meal:          form.meal,
-        dietaryNotes:  form.dietaryNotes,
-        song:          form.song,
-        message:       form.message,
-        timestamp:     new Date().toISOString(),
+//     try {
+//       // Build form-encoded payload for Apps Script
+//     const payload = new URLSearchParams({
+//   firstName:  form.firstName,
+//   lastName:   form.lastName,
+//   email:      form.email,
+//   phone:      form.phone,
+//   attending:  form.attending,
+//   guests:     form.attending === 'yes' ? form.guests : '0',
+//   meal:       form.meal,
+//   song:       form.song,
+//   message:    form.message,
+//   timestamp:  new Date().toISOString(),
+// });
+// if (SCRIPT_URL) {
+//   const res = await fetch(SCRIPT_URL, {
+//     method: 'POST',
+
+//     body: payload,
+//   });
+// }
+
+//       // Show response based on attending choice
+//       setStatus(form.attending === 'yes' ? 'yes' : 'no');
+//     } catch (err) {
+//       console.error(err);
+//       setStatus('error');
+//       setErrorMsg('Something went wrong. Please try again or email us directly.');
+//     }
+
+try {
+      const res = await fetch('/api/rsvp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName: form.firstName,
+          lastName:  form.lastName,
+          email:     form.email,
+          phone:     form.phone,
+          attending: form.attending,
+          guests:    form.attending === 'yes' ? form.guests : '0',
+          meal:      form.meal,
+          song:      form.song,
+          message:   form.message,
+          timestamp: new Date().toISOString(),
+        }),
       });
 
-      if (SCRIPT_URL) {
-        const res = await fetch(SCRIPT_URL, {
-          method:  'POST',
-          mode:    'no-cors', // Apps Script requires no-cors
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body:    payload.toString(),
-        });
-        // no-cors returns opaque response — assume success after fetch
+      const data = await res.json();
+
+      if (!data.success) {
+        throw new Error(data.error || 'Submission failed');
       }
 
-      // Show response based on attending choice
       setStatus(form.attending === 'yes' ? 'yes' : 'no');
     } catch (err) {
       console.error(err);
@@ -157,7 +183,7 @@ export default function RSVP() {
             <button
               onClick={() => {
                 setStatus('idle');
-                setForm({ firstName:'',lastName:'',email:'',phone:'',attending:'',guests:'1',meal:'',dietaryNotes:'',song:'',message:'' });
+                setForm({ firstName:'',lastName:'',email:'',phone:'',attending:'',guests:'1',meal:'',song:'',message:'' });
               }}
               className="btn-wine"
             >
@@ -196,183 +222,174 @@ export default function RSVP() {
           <div className="bg-white border border-wine border-opacity-15 p-8 md:p-12">
             <form onSubmit={handleSubmit} className="space-y-8" noValidate>
 
-              {/* ── Name row ─────────────────────────────────── */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <FormField label="First Name" required>
-                  <input
-                    type="text"
-                    name="firstName"
-                    value={form.firstName}
-                    onChange={handleChange}
-                    placeholder="Amara"
-                    className={inputClass}
-                    required
-                  />
-                </FormField>
-                <FormField label="Last Name" required>
-                  <input
-                    type="text"
-                    name="lastName"
-                    value={form.lastName}
-                    onChange={handleChange}
-                    placeholder="Okonkwo"
-                    className={inputClass}
-                    required
-                  />
-                </FormField>
-              </div>
+  {/* ── Name row ─────────────────────────────────── */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <FormField label="First Name" required>
+      <input
+        type="text"
+        name="firstName"
+        value={form.firstName}
+        onChange={handleChange}
+        placeholder="Amara"
+        className={inputClass}
+        required
+      />
+    </FormField>
+    <FormField label="Last Name" required>
+      <input
+        type="text"
+        name="lastName"
+        value={form.lastName}
+        onChange={handleChange}
+        placeholder="Okonkwo"
+        className={inputClass}
+        required
+      />
+    </FormField>
+  </div>
 
-              {/* ── Contact ──────────────────────────────────── */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <FormField label="Email Address" required>
-                  <input
-                    type="email"
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    placeholder="amara@email.com"
-                    className={inputClass}
-                    required
-                  />
-                </FormField>
-                <FormField label="Phone Number">
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={form.phone}
-                    onChange={handleChange}
-                    placeholder="+234 800 000 0000"
-                    className={inputClass}
-                  />
-                </FormField>
-              </div>
+  {/* ── Contact ──────────────────────────────────── */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <FormField label="Email Address" required>
+      <input
+        type="email"
+        name="email"
+        value={form.email}
+        onChange={handleChange}
+        placeholder="amara@email.com"
+        className={inputClass}
+        required
+      />
+    </FormField>
+    <FormField label="Phone Number">
+      <input
+        type="tel"
+        name="phone"
+        value={form.phone}
+        onChange={handleChange}
+        placeholder="+234 800 000 0000"
+        className={inputClass}
+      />
+    </FormField>
+  </div>
 
-              {/* ── Attending ────────────────────────────────── */}
-              <FormField label="Will You Be Attending?" required>
-                <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                  {[
-                    { value: 'yes', label: 'Joyfully Accepts' },
-                    { value: 'no',  label: 'Regretfully Declines' },
-                  ].map(({ value, label }) => (
-                    <label
-                      key={value}
-                      className={`flex items-center gap-3 cursor-pointer border p-4 flex-1 transition-all duration-300 ${
-                        form.attending === value
-                          ? 'border-wine bg-wine-pale text-wine'
-                          : 'border-wine border-opacity-20 text-muted hover:border-opacity-50'
-                      }`}
-                    >
-                      <input
-                        type="radio"
-                        name="attending"
-                        value={value}
-                        checked={form.attending === value}
-                        onChange={handleChange}
-                        className="sr-only"
-                      />
-                      {/* Custom radio */}
-                      <span
-                        className={`w-4 h-4 flex-shrink-0 rounded-full border-2 transition-all ${
-                          form.attending === value ? 'border-wine bg-wine' : 'border-muted bg-transparent'
-                        }`}
-                      />
-                      <span className="font-garamond text-base">{label}</span>
-                    </label>
-                  ))}
-                </div>
-              </FormField>
+  {/* ── Attending ────────────────────────────────── */}
+  <FormField label="Will You Be Attending?" required>
+    <div className="flex flex-col sm:flex-row gap-4 pt-2">
+      {[
+        { value: 'yes', label: 'Joyfully Accepts' },
+        { value: 'no',  label: 'Regretfully Declines' },
+      ].map(({ value, label }) => (
+        <label
+          key={value}
+          className={`flex items-center gap-3 cursor-pointer border p-4 flex-1 transition-all duration-300 ${
+            form.attending === value
+              ? 'border-wine bg-wine-pale text-wine'
+              : 'border-wine border-opacity-20 text-muted hover:border-opacity-50'
+          }`}
+        >
+          <input
+            type="radio"
+            name="attending"
+            value={value}
+            checked={form.attending === value}
+            onChange={handleChange}
+            className="sr-only"
+          />
+          <span
+            className={`w-4 h-4 flex-shrink-0 rounded-full border-2 transition-all ${
+              form.attending === value ? 'border-wine bg-wine' : 'border-muted bg-transparent'
+            }`}
+          />
+          <span className="font-garamond text-base">{label}</span>
+        </label>
+      ))}
+    </div>
+  </FormField>
 
-              {/* ── Conditional: attending yes fields ───────── */}
-              {form.attending === 'yes' && (
-                <>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <FormField label="Number of Guests (including yourself)">
-                      <select
-                        name="guests"
-                        value={form.guests}
-                        onChange={handleChange}
-                        className={inputClass}
-                      >
-                        {[1,2,3,4,5].map((n) => (
-                          <option key={n} value={n}>{n} {n === 1 ? 'Guest' : 'Guests'}</option>
-                        ))}
-                      </select>
-                    </FormField>
+  {/* ── Conditional: shown only when YES is selected ── */}
+  {form.attending === 'yes' && (
+    <>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <FormField label="Number of Guests (including yourself)">
+          <select
+            name="guests"
+            value={form.guests}
+            onChange={handleChange}
+            className={inputClass}
+          >
+            {[1, 2].map((n) => (
+              <option key={n} value={n}>{n} {n === 1 ? 'Guest' : 'Guests'}</option>
+            ))}
+          </select>
+        </FormField>
 
-                    <FormField label="Meal Preference">
-                      <select
-                        name="meal"
-                        value={form.meal}
-                        onChange={handleChange}
-                        className={inputClass}
-                      >
-                        <option value="">Select a preference</option>
-                        <option value="Standard">Standard Menu</option>
-                        <option value="Vegetarian">Vegetarian</option>
-                        <option value="Vegan">Vegan</option>
-                        <option value="Halal">Halal</option>
-                        <option value="Gluten-Free">Gluten-Free</option>
-                      </select>
-                    </FormField>
-                  </div>
+        <FormField label="Meal Preference">
+          <select
+            name="meal"
+            value={form.meal}
+            onChange={handleChange}
+            className={inputClass}
+          >
+            <option value="">Select a dish</option>
+            <option value="Jollof Rice & Chicken">Jollof Rice & Chicken</option>
+            <option value="Amala & Ewedu">Amala & Ewedu</option>
+            <option value="Pounded Yam & Egusi Soup">Pounded Yam & Egusi Soup</option>
+            <option value="Fried Rice & Beef">Fried Rice & Beef</option>
+            <option value="Ofada Rice & Ayamase">Ofada Rice & Ayamase</option>
+            <option value="Efo Riro & White Rice">Efo Riro & White Rice</option>
+            <option value="Vegetarian Plate">Vegetarian Plate</option>
+          </select>
+        </FormField>
+      </div>
 
-                  <FormField label="Dietary Restrictions / Allergies">
-                    <input
-                      type="text"
-                      name="dietaryNotes"
-                      value={form.dietaryNotes}
-                      onChange={handleChange}
-                      placeholder="Nut allergy, lactose intolerance, etc."
-                      className={inputClass}
-                    />
-                  </FormField>
+      <FormField label="Your Song Request 🎵">
+        <input
+          type="text"
+          name="song"
+          value={form.song}
+          onChange={handleChange}
+          placeholder="Tell the DJ what to play for you!"
+          className={inputClass}
+        />
+      </FormField>
+    </>
+  )}
 
-                  <FormField label="Your Song Request 🎵">
-                    <input
-                      type="text"
-                      name="song"
-                      value={form.song}
-                      onChange={handleChange}
-                      placeholder="Tell the DJ what to play for you!"
-                      className={inputClass}
-                    />
-                  </FormField>
-                </>
-              )}
+  {/* ── Message ──────────────────────────────────── */}
+  <FormField label="A Note for the Couple">
+    <textarea
+      name="message"
+      value={form.message}
+      onChange={handleChange}
+      rows={4}
+      placeholder="Words of love, advice, or simply hello…"
+      className={`${inputClass} resize-none`}
+    />
+  </FormField>
 
-              {/* ── Message ──────────────────────────────────── */}
-              <FormField label="A Note for the Couple">
-                <textarea
-                  name="message"
-                  value={form.message}
-                  onChange={handleChange}
-                  rows={4}
-                  placeholder="Words of love, advice, or simply hello…"
-                  className={`${inputClass} resize-none`}
-                />
-              </FormField>
+  {/* ── Error message ────────────────────────────── */}
+  {errorMsg && (
+    <p className="font-garamond text-wine text-sm border border-wine border-opacity-30 p-4">
+      {errorMsg}
+    </p>
+  )}
 
-              {/* ── Error message ─────────────────────────── */}
-              {errorMsg && (
-                <p className="font-garamond text-wine text-sm border border-wine border-opacity-30 p-4">
-                  {errorMsg}
-                </p>
-              )}
+  {/* ── Submit ───────────────────────────────────── */}
+  <div className="pt-4 text-center">
+    <button
+      type="submit"
+      disabled={status === 'loading'}
+      className="btn-wine-filled w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
+    >
+      {status === 'loading' ? 'Sending Your Response…' : 'Send My RSVP'}
+    </button>
+    <p className="font-garamond italic text-muted text-xs mt-4">
+      You will receive a confirmation once submitted.
+    </p>
+  </div>
 
-              {/* ── Submit ───────────────────────────────────── */}
-              <div className="pt-4 text-center">
-                <button
-                  type="submit"
-                  disabled={status === 'loading'}
-                  className="btn-wine-filled w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {status === 'loading' ? 'Sending Your Response…' : 'Send My RSVP'}
-                </button>
-                <p className="font-garamond italic text-muted text-xs mt-4">
-                  You will receive a confirmation once submitted.
-                </p>
-              </div>
-            </form>
+</form>
           </div>
 
           {/* Deadline note */}
