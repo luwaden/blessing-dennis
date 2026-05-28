@@ -53,8 +53,8 @@ const registryItems = [
 ];
 
 const bankDetails = [
-  { bank: 'GTBank', accountName: 'Dennis Emmanuel Eze', accountNumber: '0123456789' },
-  { bank: 'Access Bank', accountName: 'Blessing Adaeze Okafor', accountNumber: '9876543210' },
+  { bank: 'UBA', accountName: 'Ayodeji Dennis Oluwatunla', accountNumber: '2074017708' },
+  { bank: 'Sterling Bank', accountName: 'Blessing Oluwaseun Obafemi', accountNumber: '0067961114' },
 ];
 
 function RegistryItem({ item }) {

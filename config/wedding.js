@@ -26,16 +26,16 @@ export const wedding = {
 // Replace the single venue object with two:
 export const venues = {
   
-  church: {
+  reception: {
     name: 'St.Matthias Hall',
     address: 'Ajayi Crowther seminary, Grammar School Bus Stop, Igbein ',
     city: 'Abeokuta, Nigeria',
     mapLink: 'https://maps.app.goo.gl/rskwchj2KY7m55eo7',
   },
-  reception: {
-    name: 'The Oriental Hotel',
-    address: '3 Lekki-Epe Expressway, Victoria Island',
-    city: 'Lagos, Nigeria',
+  church: {
+    name: 'Chapel hall, Goverment house',
+    address: 'oke Igbein, Abeokuta, ',
+    city: 'Ogun, Nigeria',
     time: '3:00 PM',
     mapLink: 'https://maps.google.com/?q=The+Oriental+Hotel+Lagos',
   },

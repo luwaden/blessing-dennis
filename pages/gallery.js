@@ -4,6 +4,60 @@ import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
 import { SectionLabel } from '../components/ArchDecor';
 import { demoGalleryImages } from '../config/images';
+import { wedding } from '../config/wedding';
+
+function CoupleVideo() {
+  return (
+    <section className="bg-white py-16 md:py-20 px-5">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-10">
+          <SectionLabel label="Our Video" />
+          <h2 className="font-script text-wine mt-3 text-4xl md:text-5xl">A Glimpse of Us</h2>
+          <p className="font-garamond italic text-muted text-base mt-3">
+            A short film of two people falling beautifully in love.
+          </p>
+        </div>
+
+        {/* Arch-topped video frame */}
+        <div className="relative mx-auto max-w-3xl">
+          {/* Arch top border */}
+          <div
+            className="overflow-hidden border border-wine border-opacity-20 shadow-lg"
+            style={{ borderRadius: '50% 50% 0 0 / 8% 8% 0 0' }}
+          >
+            <video
+              className="w-full aspect-video object-cover bg-ink"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              poster="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80"
+            >
+              {/*
+               * Replace src below with your actual video URL.
+               * Cloudinary example:
+               * <source src="https://res.cloudinary.com/YOUR_CLOUD/video/upload/q_auto/couple-video.mp4" type="video/mp4" />
+               *
+               * YouTube / Vimeo embed alternative: swap the <video> tag for an <iframe> instead.
+               */}
+              <source
+                src="https://res.cloudinary.com/dkgr3ff3j/video/upload/v1779884433/VID_20260321_161653_1_ejkkep.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          {/* Caption */}
+          <p className="text-center font-garamond italic text-muted text-sm mt-4">
+            {wedding.bride.firstName} &amp; {wedding.groom.firstName} — Our Story in Motion
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function Lightbox({ images, current, onClose, onPrev, onNext }) {
   return (
@@ -74,7 +128,7 @@ export default function Gallery() {
   return (
     <Layout>
       <Head>
-        <title>Gallery — Chioma & Tobenna</title>
+        <title>Gallery — Blessing & Dennis</title>
       </Head>
 
       <PageHeader
@@ -82,6 +136,8 @@ export default function Gallery() {
         label="Photographs"
         subtitle="Every picture, a chapter of us."
       />
+
+      <CoupleVideo />
 
       {/* ── Gallery Grid ─────────────────────────────────────── */}
       <section className="bg-cream py-16 md:py-24 px-5">
@@ -124,6 +180,8 @@ export default function Gallery() {
           </div>
         </div>
       </section>
+
+ 
 
       {/* Lightbox */}
       {lightbox !== null && (

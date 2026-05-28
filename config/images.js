@@ -45,8 +45,8 @@ export const storyImages = {
 };
 
 export const sectionPreviews = {
-  ourStory:  square('wedding/section-story'),
-  gallery:   square('wedding/section-gallery'),
+  ourStory:  square('https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884530/IMG_20251124_165649_xklkar.jpg'),
+  gallery:   square('https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884516/IMG_20260321_164124_900_dwce0o.jpg'),
   hotels:    square('wedding/section-hotels'),
   registry:  square('wedding/section-registry'),
   rsvp:      square('wedding/section-rsvp'),
@@ -56,24 +56,34 @@ export const sectionPreviews = {
 // ─── Fallback / Demo Images (Unsplash - replace with Cloudinary in production)
 // These are provided so the site renders beautifully right away.
 export const demoHeroImages = [
-  'https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80',
-  'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1920&q=80',
-  'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1920&q=80',
+  'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884347/IMG_20251124_170028_1_uipywc.jpg',
+  'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884525/B_O-0814_yeoras.jpg',
+  'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779886021/IMG_4358_n73kz0.jpg',
   'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1920&q=80',
   'https://images.unsplash.com/photo-1529636798458-92182e662485?w=1920&q=80',
 ];
 
 export const demoGalleryImages = [
-  { src: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80', alt: 'Together forever' },
-  { src: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80', alt: 'Our day' },
-  { src: 'https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=800&q=80', alt: 'Engagement shoot' },
-  { src: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&q=80', alt: 'Candid joy' },
-  { src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80', alt: 'Florals' },
-  { src: 'https://images.unsplash.com/photo-1529636798458-92182e662485?w=800&q=80', alt: 'Golden hour' },
-  { src: 'https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=800&q=80', alt: 'Laughter' },
-  { src: 'https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=800&q=80', alt: 'Close-up' },
-  { src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80', alt: 'Groom portrait' },
-  { src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80', alt: 'Bride portrait' },
-  { src: 'https://images.unsplash.com/photo-1487530811015-780aefcf7aef?w=800&q=80', alt: 'Romantic moment' },
-  { src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80', alt: 'Wedding day' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884535/PXL_20250815_101935787_a7omcx.jpg', alt: 'Together forever' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884679/IMG_20251124_170522_mezstv.jpg', alt: 'Our day' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779886529/IMG_20260214_115400_333_sxxnbn.jpg', alt: 'Engagement shoot' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884402/PXL_20250816_130249029_qu17om.jpg', alt: 'Candid joy' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779886007/a9e1ab6b834d4dcfbc457a05370dc6b3_whx69f.jpg', alt: 'Florals' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884672/IMG_20251124_170158_nm1r5p.jpg', alt: 'Golden hour' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779886332/IMG-20220323-WA0021_m4s2rl.jpg', alt: 'Laughter' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884658/IMG-20230618-WA0021_ewkqj1.jpg', alt: 'Close-up' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779886543/IMG_20260321_164256_983_1_ffceor.jpg', alt: 'Groom portrait' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779886539/IMG-20211017-WA0032_istowu.jpg', alt: 'Bride portrait' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884537/IMG-20221227-WA0005_xf1d5q.jpg', alt: 'Romantic moment' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779886533/IMG_20251119_115805_249_1_fpxz03.jpg', alt: 'Wedding day' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884492/PXL_20250816_130306827_ie4xiy.jpg', alt: 'Wedding day' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884483/PXL_20250816_125756178_vi5etd.jpg', alt: 'Wedding day' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884481/IMG_20250815_115102_daqv7v.jpg', alt: 'Wedding day' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779886013/IMG_20211229_152748_fatcak.jpg', alt: 'Wedding day' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779886018/f14ddb478d034fb1b9e96cee81d77ee1_lx50ua.jpg', alt: 'Wedding day' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779885990/IMG_7380_qiiwqx.jpg', alt: 'Wedding day' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779886023/IMG-20230618-WA0023_1_sd0hv6.jpg', alt: 'Wedding day' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779886536/IMG-20220531-WA0004_pfqp2v.jpg', alt: 'Wedding day' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779886548/IMG_20260321_164126_683_xgm8ni.jpg', alt: 'Wedding day' },
+  { src: 'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779886021/IMG_4358_n73kz0.jpg', alt: 'Wedding day' },
 ];

@@ -382,8 +382,8 @@ export default function RSVP() {
             </p>
             <p className="font-garamond italic text-muted text-sm mt-1">
               Questions? Email{' '}
-              <a href="mailto:wedding@BlessingandDennis.com" className="text-wine underline underline-offset-2">
-                wedding@BlessingandDennis.com
+              <a href="mailto:blessingweddennis@gmail.com" className="text-wine underline underline-offset-2">
+              blessingweddennis@gmail.com
               </a>
             </p>
           </div>
