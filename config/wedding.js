@@ -6,13 +6,19 @@ export const wedding = {
   bride: {
     firstName: 'Blessing',
     lastName: 'Obafemi',
-    bio: `Blessing Oluwaseun Obafemi is a Lagos-born architect whose creative eye shapes everything she touches — from the buildings she designs to the way she arranges wildflowers on a Sunday morning. She finds joy in long walks, the smell of old books, and conversations that stretch past midnight. Her laugh is the kind that fills a room.`,
+    bio: `Blessing Oluwaseun Obafemi is a Lagos-born banker and senior data analyst whose world is beautifully ruled by numbers, patterns, and the quiet poetry hidden inside data. But beyond the dashboards and precision, she sees life — and love — with rare clarity. Her analytical eyes didn’t just read trends… they made a single undeniable conclusion: Dennis is her one and only.
+
+Beneath her structured brilliance is a deeply soft generous heart , that stole dennis' heart: a woman anchored in faith, overflowing with kindness, and constantly extending grace to everyone around her. She loves God with sincerity, loves people with intention, and somehow manages to balance corporate excellence with a warmth that feels almost uncalculated — almost..
+    SHe grew up with, family laughter, and Sunday rhythms that shaped her steady spirit.`,
     photo: 'https://res.cloudinary.com/YOUR_CLOUD/image/upload/w_600,h_800,c_fill/bride-portrait.jpg',
   },
   groom: {
     firstName: 'Dennis',
     lastName: 'Oluwatunla',
-    bio: `Ayodeji Dennis Oluwatunla grew up in Enugu with a deep love for music, football, and the unhurried pace of family Sunday lunches. Now a Lagos-based financial consultant, he has never lost that warmth. He is the man who remembers your order, notices when you are quiet, and always shows up — for everyone he loves.`,
+    bio: `Ayodeji Dennis Oluwatunla is an Ibadan-born software engineer who understands systems, logic, and elegant architecture — whether in code or in life. Somewhere between backend APIs and problem-solving, he quietly engineered the most unexpected system of all: his way into Blessing Oluwaseun’s heart.
+
+Calm, observant, and effortlessly dependable, Dennis carries the kind of presence that doesn’t need noise to be felt. He notices details others miss, remembers what matters, and shows up with consistency that feels almost like good engineering — reliable, intentional, and hard to break.`
+,
     photo: 'https://res.cloudinary.com/YOUR_CLOUD/image/upload/w_600,h_800,c_fill/groom-portrait.jpg',
   },
   weddingDate: new Date('2026-08-01T10:00:00'),
