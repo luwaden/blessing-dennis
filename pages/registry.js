@@ -7,52 +7,61 @@ const registryItems = [
   {
     category: 'Kitchen & Dining',
     items: [
-      { name: 'KitchenAid Stand Mixer', note: 'Artisan Series — Empire Red', price: '₦180,000', qty: 1, claimed: 0 },
-      { name: 'Le Creuset Dutch Oven', note: '28cm Round Casserole — Cerise', price: '₦95,000', qty: 1, claimed: 0 },
-      { name: 'Nespresso Vertuo Coffee Machine', note: 'Chrome finish with frother', price: '₦75,000', qty: 1, claimed: 0 },
-      { name: 'Dinner Set for 8', note: 'White porcelain with gold trim', price: '₦60,000', qty: 1, claimed: 0 },
-      { name: 'Crystal Wine Glasses (Set of 8)', note: 'Riedel Veritas series', price: '₦45,000', qty: 2, claimed: 0 },
-      { name: 'Handblown Decanter', note: 'Blown glass, artisan made', price: '₦28,000', qty: 1, claimed: 0 },
+      { name: 'Gas Cooker', note: '4 or 5 Burner Standing Cooker', price: '₦250,000', qty: 1, claimed: 0 },
+      { name: 'Blender', note: 'Heavy Duty Kitchen Blender', price: '₦80,000', qty: 1, claimed: 0 },
+      { name: 'Microwave Oven', note: 'Digital with Grill Function', price: '₦120,000', qty: 1, claimed: 0 },
+      { name: 'Electric Kettle', note: 'Fast Boil Stainless Steel', price: '₦25,000', qty: 1, claimed: 0 },
+      { name: 'Dinner Set', note: 'Complete Set for 12 People', price: '₦80,000', qty: 1, claimed: 0 },
+      { name: 'Cookware Set', note: 'Non-stick Pots and Pans', price: '₦100,000', qty: 1, claimed: 0 },
+      { name: 'Cutlery Set', note: '24-Piece Stainless Steel Set', price: '₦35,000', qty: 1, claimed: 0 },
     ],
   },
+
   {
     category: 'Bedroom & Linen',
     items: [
-      { name: 'Egyptian Cotton Sheet Set (King)', note: '1000 thread count — Ivory', price: '₦55,000', qty: 2, claimed: 0 },
-      { name: 'Duvet & Duvet Cover Set', note: 'All-season, King size', price: '₦70,000', qty: 1, claimed: 0 },
-      { name: 'Weighted Blanket', note: '8kg, Silver Grey', price: '₦35,000', qty: 1, claimed: 0 },
-      { name: 'Luxury Towel Set (x6)', note: 'Thick-weave Turkish cotton', price: '₦40,000', qty: 2, claimed: 0 },
+      { name: 'Bed Frame', note: 'Queen Size Wooden Frame', price: '₦180,000', qty: 1, claimed: 0 },
+      { name: 'Orthopedic Mattress', note: '6x6 Premium Mattress', price: '₦250,000', qty: 1, claimed: 0 },
+      { name: 'Bedsheet Set', note: 'Cotton, Queen Size', price: '₦30,000', qty: 2, claimed: 0 },
+      { name: 'Duvet & Pillow Set', note: 'Complete Bedding Package', price: '₦60,000', qty: 1, claimed: 0 },
+      { name: 'Bath Towel Set', note: '6-Piece Family Set', price: '₦35,000', qty: 1, claimed: 0 },
     ],
   },
+
   {
     category: 'Living Room',
     items: [
-      { name: 'Dyson V15 Cordless Vacuum', note: 'Detect Absolute model', price: '₦220,000', qty: 1, claimed: 0 },
-      { name: 'Scented Candle Collection', note: 'Jo Malone — Peony & Blush Suede', price: '₦30,000', qty: 3, claimed: 0 },
-      { name: 'Coffee Table Books (Art & Travel)', note: 'A curated shelf starter set', price: '₦25,000', qty: 1, claimed: 0 },
-      { name: 'Indoor Plants Starter Set', note: 'Monstera, Fiddle-leaf, Peace Lily', price: '₦18,000', qty: 1, claimed: 0 },
+      { name: 'Smart TV', note: '43-inch Android TV', price: '₦300,000', qty: 1, claimed: 0 },
+      { name: 'Center Table', note: 'Modern Wooden Design', price: '₦120,000', qty: 1, claimed: 0 },
+      { name: 'Standing Fan', note: 'Rechargeable Fan', price: '₦85,000', qty: 2, claimed: 0 },
+      { name: 'Curtains', note: 'Living Room Window Set', price: '₦50,000', qty: 1, claimed: 0 },
+      { name: 'Rug', note: 'Living Room Area Rug', price: '₦70,000', qty: 1, claimed: 0 },
     ],
   },
+
   {
-    category: 'Experiences',
+    category: 'Household Essentials',
     items: [
-      { name: 'Honeymoon Contribution', note: 'Maldives — any amount appreciated 💛', price: 'Any Amount', qty: null, claimed: 0, open: true },
-      { name: 'Date Night Fund', note: 'Help us keep the romance alive', price: 'Any Amount', qty: null, claimed: 0, open: true },
-      { name: 'Fine Dining Experience', note: 'Dinner at Nok by Alara, Lagos', price: '₦60,000', qty: 2, claimed: 0 },
+      { name: 'Washing Machine', note: 'Automatic Front Load', price: '₦350,000', qty: 1, claimed: 0 },
+      { name: 'Refrigerator', note: 'Double Door Fridge', price: '₦450,000', qty: 1, claimed: 0 },
+      { name: 'Generator Contribution', note: 'Support our home power setup', price: 'Any Amount', qty: null, claimed: 0, open: true },
+      { name: 'Water Dispenser', note: 'Hot and Cold', price: '₦80,000', qty: 1, claimed: 0 },
+      { name: 'Household Shopping Fund', note: 'Help us purchase daily essentials', price: 'Any Amount', qty: null, claimed: 0, open: true },
     ],
   },
+
   {
     category: 'Home Setup',
     items: [
-      { name: 'Robot Vacuum Cleaner', note: 'iRobot Roomba j7+', price: '₦180,000', qty: 1, claimed: 0 },
-      { name: 'Air Purifier', note: 'Dyson Pure Cool — Large rooms', price: '₦150,000', qty: 1, claimed: 0 },
-      { name: 'Premium Blender', note: 'Vitamix A3500', price: '₦120,000', qty: 1, claimed: 0 },
-      { name: 'Instant Pot Duo 7-in-1', note: '6 Quart — perfect for jollof!', price: '₦55,000', qty: 1, claimed: 0 },
+      { name: 'Inverter System Contribution', note: 'Support our backup power solution', price: 'Any Amount', qty: null, claimed: 0, open: true },
+      { name: 'Air Conditioner', note: '1.5HP Split Unit', price: '₦400,000', qty: 1, claimed: 0 },
+      { name: 'Pressing Iron', note: 'Steam Iron', price: '₦25,000', qty: 1, claimed: 0 },
+      { name: 'Home Furnishing Fund', note: 'Support our home setup journey', price: 'Any Amount', qty: null, claimed: 0, open: true },
     ],
   },
 ];
 
-const bankDetails = [
+export const bankDetails = [
   { bank: 'UBA', accountName: 'Ayodeji Dennis Oluwatunla', accountNumber: '2074017708' },
   { bank: 'Sterling Bank', accountName: 'Blessing Oluwaseun Obafemi', accountNumber: '0067961114' },
 ];

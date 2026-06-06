@@ -183,7 +183,7 @@ export default function Hotels() {
             <SectionLabel label="Nearby Hotels" />
             <h2 className="font-script text-wine mt-3 text-4xl md:text-5xl">Rest Well, Celebrate Well</h2>
             <p className="font-garamond text-muted italic text-lg mt-3 max-w-xl mx-auto">
-              All hotels are within easy reach of the wedding venue on Victoria Island.
+              All hotels are within easy reach of the wedding venue at Abeokuta.
             </p>
           </div>
 
@@ -201,13 +201,11 @@ export default function Hotels() {
           <FleuronDivider className="mb-10" />
           <h3 className="font-script text-wine text-3xl md:text-4xl mb-4">Getting Around Lagos</h3>
           <p className="font-garamond text-muted text-base leading-relaxed mb-6">
-            We recommend booking a ride via Bolt or Uber for comfortable, air-conditioned travel around
-            Victoria Island. Most hotels also offer shuttle or concierge transport services.
-            For international guests, the closest airports are Murtala Muhammed International (MMIA) in
-            Ikeja and the domestic terminal.
+            We recommend booking a ride via Bolt or Uber for comfortable, air-conditioned to travel or explore around
+            Abeokuta. 
           </p>
           <p className="font-garamond italic text-wine text-sm">
-            Please book your accommodation early — Lagos fills up fast for long weekends!
+            Please book your accommodation early — hotels might fills up fast for long weekends!
           </p>
           <FleuronDivider className="mt-10" />
         </div>

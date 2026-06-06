@@ -84,7 +84,7 @@ export default function OurStory() {
                 <div className="aspect-[3/4]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
+                    src="https://res.cloudinary.com/dergk96ic/image/upload/v1761650699/Gemini_Generated_Image_8go2748go2748go2_iel77r.png"
                     alt={wedding.groom.firstName}
                     className="w-full h-full object-cover"
                   />

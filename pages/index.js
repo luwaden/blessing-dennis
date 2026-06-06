@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import HeroSlider from '../components/HeroSlider';
 import { SectionLabel, FleuronDivider, ArchDivider } from '../components/ArchDecor';
 import { wedding,venues } from '../config/wedding';
+import { bankDetails } from './registry';
 
 // Section cards data
 const sections = [
@@ -183,6 +184,43 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+         <section className="bg-white py-16 md:py-20 px-5">
+              <div className="max-w-2xl mx-auto">
+                <div className="text-center mb-10">
+                  <SectionLabel label="Bank Transfer" />
+                  <h2 className="font-script text-wine mt-3 text-4xl md:text-5xl">Cash Contributions</h2>
+                  <p className="font-garamond text-muted italic text-base mt-3 max-w-md mx-auto">
+                    If you prefer to gift us directly, kindly check our{" "}
+                    <Link href="/registry" className="text-wine underline">
+                      registry page
+                    </Link>.
+                  </p>
+                </div>
+      
+                <div className="space-y-4">
+                  {bankDetails.map((b) => (
+                    <div
+                      key={b.bank}
+                      className="border border-wine border-opacity-20 p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+                    >
+                      <div>
+                        <p className="font-garamond text-xs tracking-[0.3em] uppercase text-wine opacity-70 mb-1">{b.bank}</p>
+                        <p className="font-garamond font-medium text-ink text-lg">{b.accountName}</p>
+                      </div>
+                      <div className="text-left sm:text-right">
+                        <p className="font-garamond text-xs text-muted tracking-wider mb-1">Account Number</p>
+                        <p className="font-garamond text-wine font-medium text-xl tracking-widest">{b.accountNumber}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+      
+                <p className="font-garamond text-center italic text-muted text-sm mt-8">
+                  Please use your name as payment reference so we know to thank you!
+                </p>
+              </div>
+            </section>
 
       {/* ── Quote strip ───────────────────────────────────────── */}
       <section className="bg-parchment py-20 px-5 text-center">
