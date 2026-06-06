@@ -80,39 +80,122 @@ export const schedule = [
 
 export const loveStory = [
   {
-    year: 'March 2020',
-    title: 'The First Hello',
-    text: `It was an ordinary Tuesday afternoon at a mutual friend's birthday gathering in Lekki. Blessing was laughing at something across the room when Dennis first saw her. He spent the next hour working up the courage to say hello. The conversation that followed lasted until the venue lights came on.`,
+    year: '2018 – 2019',
+    title: 'Two Worlds, One Prayer Room',
+    text: `Blessing walked into an RFC Prayer Unit meeting thinking it was just another quiet spiritual gathering… maybe even a short one (God laughs in timelines).
+
+Dennis was already there — calm, focused, and slightly unaware that his life was about to be “recompiled.”
+
+They didn’t talk much. Just polite hellos, spiritual intensity, and zero romantic awareness. In Blessing’s mind: “just fellowship.” In Dennis’ mind: “just another prayer meeting.”
+
+Spoiler: it was not “just.”`,
     side: 'right',
   },
+
   {
-    year: 'April 2020',
-    title: 'First Date',
-    text: `Over jollof rice and conversation that stretched from afternoon into evening at their favourite Ikoyi spot, they discovered they shared the same love for old Fela Kuti records, terrible Nigerian films, and the dream of one day building a home that felt like a warm embrace.`,
+    year: '2019',
+    title: 'The Prayer Circle Era',
+    text: `Dennis later invited a small group for intercessory prayers — and somehow, Blessing ended up there too (coincidence? we think not).
+
+From Blessing’s POV: “A nice prayer group with disciplined people.”
+
+From Dennis’ POV: “A prayer group… where one particular person keeps laughing at my serious prayer face.”
+
+What started as intercession slowly turned into friendship, inside jokes, shared scriptures, and “see you next prayer meeting” becoming the highlight of the week.`,
     side: 'left',
   },
+
   {
-    year: '2021',
-    title: 'Falling Deeper',
-    text: `Through long phone calls and quiet Sunday mornings, through family celebrations and the beautiful ordinary of everyday life, their love grew into something neither had quite imagined possible. They became each other's calm in every storm.`,
+    year: '2020',
+    title: 'Friendship, But Make It Suspicious',
+    text: `By 2020, things were no longer normal.
+
+Blessing would pray for Dennis’ future wife with full sincerity… unknowingly submitting her own CV.
+
+Dennis at a 2018 Young Ministers Retreat had once thought, “I hope my future wife is like her…” — then proceeded to never revisit that thought out loud again.
+
+Meanwhile, their friendship grew: long chats, spiritual accountability, laughter that made prayer meetings slightly less “quiet,” and a bond that neither of them had vocabulary for yet.`,
     side: 'right',
   },
+
   {
-    year: '2022 – 2024',
-    title: 'Building Together',
-    text: `Two careers, two families, and one shared vision of the future. They traveled across three continents, built deep friendships together, and quietly — joyfully — began planning a life that felt entirely like home.`,
+    year: '2020 (Lockdown Era)',
+    title: 'When Everything Slowed Down… Except Them',
+    text: `COVID lockdown came and the world paused — but somehow their connection didn’t.
+
+Between prayers, check-ins, memes disguised as encouragement, and “are you okay?” messages that came at exactly the right time, something shifted.
+
+From Blessing’s POV: “Dennis is becoming… very consistent.”
+
+From Dennis’ POV: “I think I might be in trouble… respectfully.”
+
+Eventually, Dennis did the brave thing: he asked.
+
+Blessing said yes — after pretending she needed time to “pray about it” (God had already answered, she just wanted emotional suspense).`,
     side: 'left',
   },
+
   {
-    year: 'December 2025',
-    title: 'The Proposal',
-    text: `On a quiet December evening at their favourite corner of Bar Beach, with the Lagos skyline glittering in the distance and Blessing completely convinced they were just "going for a walk," Dennis got down on one knee. She said yes before he could finish the question.`,
+    year: '2021 – 2022',
+    title: 'Soft Love, Strong Foundation',
+    text: `They loved intentionally.
+
+Late-night calls that always said “just 10 minutes” (they lasted 2 hours).
+Arguments that ended in prayer, laughter, or both.
+
+They learned each other deeply — strengths, quirks, and the fact that Dennis becomes very serious when food is involved.
+
+One unforgettable moment: at a restaurant in UI, Amala and smoked fish soup made a dramatic appearance… directly into Dennis’ eyes.
+
+Blessing’s response? No panic. No drama. Just immediate fish accountability: she ate it.`,
     side: 'right',
   },
+
   {
-    year: 'August 1, 2026',
-    title: 'Forever Begins',
-    text: `And now, surrounded by every person who has loved, prayed for, and cheered them on, they take this sacred, long-awaited step into forever.`,
+    year: 'September 2023 – 2024',
+    title: 'The Pause That Hurt… and Healed',
+    text: `Not every chapter was soft.
+
+They paused their relationship in September 2023 — 20 months apart, full of silence, reflection, growth, and difficult questions.
+
+From the outside: distance.
+From the inside: healing in progress.
+
+But love has a way of not erasing itself — just waiting until people are ready.
+
+And they were.
+
+When they found each other again, it wasn’t rushed. It wasn’t emotional confusion. It was clarity.
+
+This time, they didn’t just return… they chose each other.`,
+    side: 'left',
+  },
+
+  {
+    year: '2025',
+    title: 'The Decision Was Already Made',
+    text: `By now, nothing needed to be forced.
+
+Dennis had already known — somewhere between consistency, peace, and shared laughter — that this was home.
+
+Blessing had already known too — somewhere between data, prayer, and undeniable peace — that this was the man.
+
+So when forever started to look like a real conversation, it wasn’t surprising anymore.
+
+It was just right.`,
+    side: 'right',
+  },
+
+  {
+    year: '2026',
+    title: 'Forever Begins (Officially)',
+    text: `From a prayer unit meeting to a lifetime covenant.
+
+From “just friends in ministry” to “this is my person.”
+
+Surrounded by love, faith, laughter, and everyone who watched the story unfold from the beginning, Blessing and Dennis step into forever — not as a surprise, but as a promise that took time to mature.
+
+And this time, there is no pause button.`,
     side: 'left',
   },
 ];
