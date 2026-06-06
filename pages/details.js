@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: 'Is there parking at the venue?',
-    a: 'Yes, The Oriental Hotel has ample parking for guests. Valet parking will also be available on the day.',
+    a: 'Yes, St.Matthias Hall, Ajayi Crowther Seminary has ample parking for guests. Valet parking will also be available on the day.',
   },
   {
     q: 'What if I have dietary restrictions?',

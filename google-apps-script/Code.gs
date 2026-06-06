@@ -24,7 +24,9 @@ const CONFIG = {
   BRIDE_NAME:        'Blessing',
   GROOM_NAME:        'Dennis',
   WEDDING_DATE:      'Saturday, August 1, 2026',
-  WEDDING_VENUE:     'The Oriental Hotel, Victoria Island, Lagos',
+  WEDDING_VENUE:     'St.Matthias Hall, Ajayi Crowther Seminary
+, Abeokuta, Ogun
+',
   CEREMONY_TIME:     '10:00 AM (doors open at 9:30 AM)',
   HASHTAG:           '#BlessingAndDennis2026',
 };
@@ -179,7 +181,8 @@ function buildYesEmail(p) {
     <!-- Footer -->
     <div class="footer">
       <p>${CONFIG.HASHTAG}</p>
-      <p>August 1, 2026 · Victoria Island, Lagos</p>
+      <p>August 1, 2026 · Abeokuta, Ogun
+</p>
     </div>
   </div>
 </body>
@@ -254,7 +257,8 @@ function buildNoEmail(p) {
     </div>
     <div class="footer">
       <p>${CONFIG.HASHTAG}</p>
-      <p>August 1, 2026 · Victoria Island, Lagos</p>
+      <p>August 1, 2026 · Abeokuta, Ogun
+</p>
     </div>
   </div>
 </body>

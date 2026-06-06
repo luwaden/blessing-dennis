@@ -13,7 +13,7 @@ const sections = [
     label:   'Our Story',
     title:   'A Love Story',
     desc:    'From a chance meeting in Lekki to a lifetime together — follow the journey that led us here.',
-    img:     'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80',
+    img:     'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884530/IMG_20251124_165649_xklkar.jpg',
     alt:     'The couple together',
   },
   {
@@ -21,7 +21,7 @@ const sections = [
     label:   'Gallery',
     title:   'Our Moments',
     desc:    'A collection of photographs capturing the everyday magic of us. Every picture tells a chapter.',
-    img:     'https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=600&q=80',
+    img:     'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884501/IMG_20251124_170158_romlyz.jpg',
     alt:     'Photography gallery',
   },
   {

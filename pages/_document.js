@@ -12,9 +12,12 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
           rel="stylesheet"
         />
-        <meta name="description" content="Blessing & Dennis — August 1, 2026 · Victoria Island, Lagos" />
+        <meta name="description" content="Blessing & Dennis — August 1, 2026 · Abeokuta, Ogun
+" />
         <meta property="og:title" content="Blessing & Dennis — August 1, 2026" />
-        <meta property="og:description" content="We're getting married! Join us on August 1st, 2026 at The Oriental Hotel, Victoria Island, Lagos." />
+        <meta property="og:description" content="We're getting married! Join us on August 1st, 2026 at St.Matthias Hall, Ajayi Crowther Seminary
+, Abeokuta, Ogun
+." />
         <meta property="og:type" content="website" />
       </Head>
       <body>
