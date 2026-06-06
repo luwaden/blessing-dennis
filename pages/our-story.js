@@ -46,6 +46,43 @@ export default function OurStory() {
         subtitle="Two people. One extraordinary love story."
       />
 
+      {/* Arch-topped video frame */}
+        <div className="relative mx-auto max-w-3xl">
+          {/* Arch top border */}
+          <div
+            className="overflow-hidden border border-wine border-opacity-20 shadow-lg"
+            style={{ borderRadius: '50% 50% 0 0 / 8% 8% 0 0' }}
+          >
+            <video
+              className="w-full aspect-video object-cover bg-ink"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              poster="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80"
+            >
+              {/*
+               * Replace src below with your actual video URL.
+               * Cloudinary example:
+               * <source src="https://res.cloudinary.com/YOUR_CLOUD/video/upload/q_auto/couple-video.mp4" type="video/mp4" />
+               *
+               * YouTube / Vimeo embed alternative: swap the <video> tag for an <iframe> instead.
+               */}
+              <source
+                src="https://res.cloudinary.com/dkgr3ff3j/video/upload/v1780761665/proposal_video_edited_ixqp9h.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          {/* Caption */}
+          <p className="text-center font-garamond italic text-muted text-sm mt-4">
+            {wedding.bride.firstName} &amp; {wedding.groom.firstName} — Our Story in Motion
+          </p>
+        </div>
+
       {/* ── Couple portraits ─────────────────────────────────── */}
       <section className="bg-white py-20 md:py-28 px-5">
         <div className="max-w-4xl mx-auto">
@@ -64,7 +101,7 @@ export default function OurStory() {
                 <div className="aspect-[3/4]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80"
+                    src="https://res.cloudinary.com/dkgr3ff3j/image/upload/v1780760956/obafemi_blessing_headshot_zfxkxp.png"
                     alt={wedding.bride.firstName}
                     className="w-full h-full object-cover"
                   />
@@ -123,7 +160,7 @@ export default function OurStory() {
         <div className="aspect-[21/9] overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&q=80"
+            src="https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884537/IMG-20221227-WA0005_xf1d5q.jpg"
             alt="Blessing and Dennis"
             className="w-full h-full object-cover"
           />

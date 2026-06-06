@@ -53,7 +53,7 @@ const sections = [
     label:   'RSVP',
     title:   'Will You Join Us?',
     desc:    'We hope you can make it. Let us know you are coming so we can save your seat.',
-    img:     'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&q=80',
+    img:     'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1780760187/ChatGPT_Image_May_16_2026_04_34_26_PM_jsltqi.png',
     alt:     'RSVP invitation',
   },
 ];

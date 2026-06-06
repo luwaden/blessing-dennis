@@ -50,17 +50,26 @@ export const contacts = [
 
 
 export const schedule = [
+  // CHURCH SERVICE (10AM - 1PM)
   { time: '9:30 AM', event: 'Guests Arrive', note: 'Please be seated by 9:50 AM' },
-  { time: '10:00 AM', event: 'Ceremony Begins', note: 'Traditional blessing & opening prayer' },
-  { time: '10:30 AM', event: 'Exchange of Vows', note: 'The moment we have been waiting for' },
-  { time: '11:00 AM', event: 'Ring Exchange & Signing', note: 'Witnessed by family and friends' },
-  { time: '11:30 AM', event: 'Photography Session', note: 'Family & bridal party portraits' },
-  { time: '1:00 PM', event: 'Cocktail Hour', note: 'Light refreshments in the garden terrace' },
-  { time: '3:00 PM', event: 'Reception Begins', note: 'Grand entrance of the couple' },
-  { time: '4:00 PM', event: 'First Dance', note: 'Followed by parent dances' },
-  { time: '5:00 PM', event: 'Dinner is Served', note: 'Sit-down dinner & toasts' },
-  { time: '7:00 PM', event: 'Cake Cutting', note: 'Followed by open dancing' },
-  { time: '10:00 PM', event: 'Last Dance', note: 'See you on the dance floor' },
+  { time: '10:00 AM', event: 'Church Service Begins', note: 'Opening prayer & worship session' },
+  { time: '10:30 AM', event: 'Word & Ministration', note: 'Sermon and marriage teachings' },
+  { time: '11:15 AM', event: 'Exchange of Vows', note: 'The sacred covenant moment' },
+  { time: '11:45 AM', event: 'Ring Exchange', note: 'Blessing of the rings' },
+  { time: '12:15 PM', event: 'Signing of Marriage Register', note: 'Witnessed by family and church officials' },
+  { time: '12:30 PM', event: 'Closing Prayer & Photo Session', note: 'Group photos with family & bridal party' },
+  { time: '1:00 PM', event: 'End of Church Ceremony', note: 'Guests proceed to reception venue' },
+
+  // RECEPTION (1PM - 6PM)
+  { time: '1:00 PM', event: 'Cocktail & Guest Arrival', note: 'Music, refreshments & seating' },
+  { time: '2:00 PM', event: 'Grand Entrance', note: 'Couple enters reception hall' },
+  { time: '2:15 PM', event: 'Welcome Speech & Toasts', note: 'Family and friends speak' },
+  { time: '3:00 PM', event: 'First Dance', note: 'Couple’s special moment' },
+  { time: '3:30 PM', event: 'Entertainment / Cultural Display', note: 'Dance, music & performances' },
+  { time: '4:30 PM', event: 'Dinner is Served', note: 'Buffet or plated service' },
+  { time: '5:15 PM', event: 'Cake Cutting', note: 'Celebration moment' },
+  { time: '5:30 PM', event: 'Open Dance Floor', note: 'Guests celebrate with music' },
+  { time: '6:00 PM', event: 'Closing Prayer & Departure', note: 'End of celebration' },
 ];
 
 export const loveStory = [
