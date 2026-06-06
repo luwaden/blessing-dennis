@@ -6,7 +6,7 @@ export const wedding = {
   bride: {
     firstName: 'Blessing',
     lastName: 'Obafemi',
-    bio: `Blessing Oluwaseun Obafemi is a Lagos-born banker and senior data analyst whose world is beautifully ruled by numbers, patterns, and the quiet poetry hidden inside data. But beyond the dashboards and precision, she sees life — and love — with rare clarity. Her analytical eyes didn’t just read trends… they made a single undeniable conclusion: Dennis is her one and only.
+    bio: `Blessing Oluwaseun Obafemi is a Lagos-born banker and senior data analyst, who hals from Abeokuta, Ogun state. whose world is beautifully ruled by numbers, patterns, and the quiet poetry hidden inside data. But beyond the dashboards and precision, she sees life — and love — with rare clarity. Her analytical eyes didn’t just read trends… they made a single undeniable conclusion: Dennis is her one and only.
 
 Beneath her structured brilliance is a deeply soft generous heart , that stole dennis' heart: a woman anchored in faith, overflowing with kindness, and constantly extending grace to everyone around her. She loves God with sincerity, loves people with intention, and somehow manages to balance corporate excellence with a warmth that feels almost uncalculated — almost..
     SHe grew up with, family laughter, and Sunday rhythms that shaped her steady spirit.`,
@@ -15,7 +15,7 @@ Beneath her structured brilliance is a deeply soft generous heart , that stole d
   groom: {
     firstName: 'Dennis',
     lastName: 'Oluwatunla',
-    bio: `Ayodeji Dennis Oluwatunla is an Ibadan-born software engineer who understands systems, logic, and elegant architecture — whether in code or in life. Somewhere between backend APIs and problem-solving, he quietly engineered the most unexpected system of all: his way into Blessing Oluwaseun’s heart.
+    bio: `Ayodeji Dennis Oluwatunla is an Ibadan-born software engineer, who hails from Igede-Ekiti, Ekiti state. He understands systems, logic, and elegant architecture — whether in code or in life. Somewhere between backend APIs and problem-solving, he quietly engineered the most unexpected system of all: his way into Blessing Oluwaseun’s heart.
 
 Calm, observant, and effortlessly dependable, Dennis carries the kind of presence that doesn’t need noise to be felt. He notices details others miss, remembers what matters, and shows up with consistency that feels almost like good engineering — reliable, intentional, and hard to break.`
 ,
@@ -43,7 +43,7 @@ export const venues = {
     address: 'oke Igbein, Abeokuta, ',
     city: 'Ogun, Nigeria',
     time: '3:00 PM',
-    mapLink: 'https://maps.google.com/?q=The+Oriental+Hotel+Lagos',
+    mapLink: 'https://maps.app.goo.gl/oVR7WHq98Xpv9wsT8',
   },
 };
 

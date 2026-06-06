@@ -205,7 +205,7 @@ export default function Hotels() {
       <section className="bg-white py-16 px-5">
         <div className="max-w-2xl mx-auto text-center">
           <FleuronDivider className="mb-10" />
-          <h3 className="font-script text-wine text-3xl md:text-4xl mb-4">Getting Around Lagos</h3>
+          <h3 className="font-script text-wine text-3xl md:text-4xl mb-4">Getting Around Abeokuta</h3>
           <p className="font-garamond text-muted text-base leading-relaxed mb-6">
             We recommend booking a ride via Bolt or Uber for comfortable, air-conditioned to travel or explore around
             Abeokuta. 

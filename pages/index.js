@@ -12,7 +12,7 @@ const sections = [
     href:    '/our-story',
     label:   'Our Story',
     title:   'A Love Story',
-    desc:    'From a chance meeting in Lekki to a lifetime together — follow the journey that led us here.',
+    desc:    'From a chance meeting in University of Ibadan to a lifetime together — follow the journey that led us here.',
     img:     'https://res.cloudinary.com/dkgr3ff3j/image/upload/v1779884530/IMG_20251124_165649_xklkar.jpg',
     alt:     'The couple together',
   },
@@ -171,13 +171,11 @@ export default function Home() {
               How It All Began
             </h2>
             <p className="font-garamond text-ink text-lg leading-relaxed mb-4">
-              It was an ordinary Tuesday afternoon at a mutual friend's gathering in Lekki.
+              It was a blessed Sunday evening at a mutual RFC weekly prayer meeting friend's  in behind chapel of resurrection hall at University in Ibadan.
               Blessing was laughing at something across the room when Dennis first noticed her.
-              He spent the next hour working up the courage to say hello.
+            
             </p>
-            <p className="font-garamond italic text-muted text-base leading-relaxed mb-8">
-              The conversation that followed lasted until the venue lights came on.
-            </p>
+            
             <Link href="/our-story" className="btn-wine">
               Read Our Story
             </Link>

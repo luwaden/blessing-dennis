@@ -14,10 +14,7 @@ const faqs = [
     q: 'Is the venue child-friendly?',
     a: 'We love your little ones! Children are warmly welcome at the ceremony. Please note the evening reception will extend late and may not be suitable for very young children.',
   },
-  {
-    q: 'Will there be transportation to the venue?',
-    a: 'We will be organising shuttle buses from Eko Hotel to the venue. Details will be sent via email closer to the date. Alternatively, Bolt and Uber are available across Lagos.',
-  },
+ 
   {
     q: 'Can I take photos during the ceremony?',
     a: 'We kindly ask that during the ceremony you put your devices away and be fully present with us. Our photographers will capture every moment beautifully. The reception is fully open for personal photos!',

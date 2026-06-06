@@ -32,7 +32,7 @@ export const galleryImages = [
   { src: gallery('wedding/gallery-08'), alt: 'Sunset together',             span: 'normal' },
   { src: gallery('wedding/gallery-09'), alt: 'First look',                  span: 'tall' },
   { src: gallery('wedding/gallery-10'), alt: 'Dancing in the rain',         span: 'normal' },
-  { src: gallery('wedding/gallery-11'), alt: 'Lagos rooftop',               span: 'normal' },
+  { src: gallery('wedding/gallery-11'), alt: 'abeokuta rooftop',               span: 'normal' },
   { src: gallery('wedding/gallery-12'), alt: 'The proposal day',            span: 'wide' },
 ];
 
