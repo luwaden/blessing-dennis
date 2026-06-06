@@ -31,20 +31,22 @@ Calm, observant, and effortlessly dependable, Dennis carries the kind of presenc
 
 // Replace the single venue object with two:
 export const venues = {
-  
+    church: {
+    name: 'Chapel hall, Goverment house',
+    address: 'oke Igbein, Abeokuta, ',
+    city: 'Ogun, Nigeria',
+    time: '10:00 AM',
+    mapLink: 'https://maps.app.goo.gl/oVR7WHq98Xpv9wsT8',
+  },
+
   reception: {
     name: 'St.Matthias Hall',
     address: 'Ajayi Crowther seminary, Grammar School Bus Stop, Igbein ',
     city: 'Abeokuta, Nigeria',
+     time: '1:00 PM',
     mapLink: 'https://maps.app.goo.gl/rskwchj2KY7m55eo7',
   },
-  church: {
-    name: 'Chapel hall, Goverment house',
-    address: 'oke Igbein, Abeokuta, ',
-    city: 'Ogun, Nigeria',
-    time: '3:00 PM',
-    mapLink: 'https://maps.app.goo.gl/oVR7WHq98Xpv9wsT8',
-  },
+
 };
 
 export const contacts = [
